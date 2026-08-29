@@ -1,8 +1,8 @@
 ## Syed Muhammad Nafay Hassan Rizvi
 
-Cybersecurity enthusiast and software developer. Most of what I build sits at
-the point where a system trusts something it shouldn't — a proxy that forwards
-data it never checked, an admin panel that believes a value from the browser.
+Cybersecurity enthusiast and software developer. Most of what I build has to do
+with trust boundaries — a proxy forwarding data it never checked, an admin panel
+believing a value from the browser.
 
 ### llm-shield
 
@@ -24,9 +24,9 @@ request.
 ### What I work on
 
 **Security** — redaction engines, auth boundaries, and the general problem of
-code that checks something in the browser and calls it authentication. I like
-finding the gap between what a tool claims and what it actually does, then
-writing the test that keeps it closed.
+code that checks something in the browser and calls it authentication. Mostly
+this means checking whether a tool actually does what it says, and adding a
+test once it does.
 
 **Backends** — Python and FastAPI mostly. Provider adapters, streaming, caching,
 usage accounting.
@@ -35,16 +35,16 @@ usage accounting.
 
 ### Open source
 
-I contribute where I can reproduce something others can't, which usually means
-Windows-specific behaviour:
+A few small contributions. I work on Windows, so I mostly end up helping
+reproduce and narrow down platform-specific reports:
 
 - [gradio-app/gradio#13781](https://github.com/gradio-app/gradio/issues/13781) —
   traced missing type stubs to a packaging path where the `.pyi` files are only
   generated as a side effect of importing the package, so a clean build ships
   `py.typed` with no stubs behind it
 - [microsoft/playwright#42402](https://github.com/microsoft/playwright/issues/42402) —
-  reproduced a libuv teardown crash on Windows and isolated it to the CLI's
-  update check
+  reproduced a libuv teardown crash on Windows and narrowed it to the update
+  check's `fetch()` call
 
 ### Toolbox
 
