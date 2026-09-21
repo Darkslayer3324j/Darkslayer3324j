@@ -6,12 +6,12 @@ believing a value from the browser.
 
 ### Open source
 
-**8 pull requests merged** into projects other people maintain. Each one started
+**9 pull requests merged** into projects other people maintain. Each one started
 with reproducing a bug or fuzzing the code to find one.
 
 | Project | Merged fix |
 |---|---|
-| [TheAlgorithms/Python](https://github.com/TheAlgorithms/Python) | [`tree_sort` silently dropped duplicate values](https://github.com/TheAlgorithms/Python/pull/15381) · [`stalin_sort` raised `IndexError` on an empty list](https://github.com/TheAlgorithms/Python/pull/15382) |
+| [TheAlgorithms/Python](https://github.com/TheAlgorithms/Python) | [`tree_sort` silently dropped duplicate values](https://github.com/TheAlgorithms/Python/pull/15381) · [`stalin_sort` raised `IndexError` on an empty list](https://github.com/TheAlgorithms/Python/pull/15382) · [`exponential_search` recursed forever below the first element](https://github.com/TheAlgorithms/Python/pull/15384) |
 | [vadimdemedes/ink](https://github.com/vadimdemedes/ink) | [PTY tests spawned the wrong Node executable](https://github.com/vadimdemedes/ink/pull/1010) |
 | [mampfes/hacs_waste_collection_schedule](https://github.com/mampfes/hacs_waste_collection_schedule) | Broken scrapers repaired after providers changed their sites: [Sjöbo](https://github.com/mampfes/hacs_waste_collection_schedule/pull/7468) · [Lindau](https://github.com/mampfes/hacs_waste_collection_schedule/pull/7469) · [RESO](https://github.com/mampfes/hacs_waste_collection_schedule/pull/7470) · [CIDIU](https://github.com/mampfes/hacs_waste_collection_schedule/pull/7471) · [Borlänge](https://github.com/mampfes/hacs_waste_collection_schedule/pull/7248) |
 
