@@ -31,9 +31,8 @@ people depend on.
 
 ## What I've shipped upstream
 
-**12 pull requests merged** into projects with **311,000+ combined stars**. No
-typo fixes — every one is a behavioural bug, with a regression test that fails
-without the patch.
+**12 pull requests merged** into projects with **311,000+ combined stars**. Each
+one addresses a behavioural bug and includes regression coverage.
 
 | Project | ⭐ | What I fixed |
 |---|---:|---|
@@ -142,7 +141,5 @@ sanitized request.**
 me is the pull request list above — open any one of them.
 
 <a href="mailto:nafayhassan3324j@gmail.com"><img src="https://img.shields.io/badge/Get%20in%20touch-nafayhassan3324j@gmail.com-0ea5e9?style=for-the-badge&logo=minutemailer&logoColor=white" alt="Contact" /></a>
-
-<sub>Assisted with Claude.</sub>
 
 </div>
