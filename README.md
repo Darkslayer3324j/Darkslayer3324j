@@ -2,14 +2,16 @@
 
 Cybersecurity enthusiast and software developer. Most of what I build has to do
 with trust boundaries — a proxy forwarding data it never checked, an admin panel
-believing a value from the browser.
+believing a value from the browser. Most of what I fix upstream starts the same
+way: I reproduce the bug first, then write the test that proves it.
 
 ### Open source
 
-**12 pull requests merged** into projects other people maintain. Each one
-started with reproducing a bug or fuzzing the code to find one.
+**12 pull requests merged** into projects other people maintain. I found every
+one of these by reproducing a report or fuzzing the code until it broke, and
+each fix ships with a test that fails without it.
 
-| Project | Merged fix |
+| Project | What I fixed |
 |---|---|
 | [microsoft/DevSkim](https://github.com/microsoft/DevSkim) | [A rule regex backtracked catastrophically](https://github.com/microsoft/DevSkim/pull/789) — DS440011 took 51 s on a 200 KB line. Rewrote it with a bounded quantifier and added a timing test. |
 | [TheAlgorithms/Python](https://github.com/TheAlgorithms/Python) | [`tree_sort` dropped duplicate values](https://github.com/TheAlgorithms/Python/pull/15381) · [`stalin_sort` raised `IndexError` on an empty list](https://github.com/TheAlgorithms/Python/pull/15382) · [`exponential_search` recursed forever below the first element](https://github.com/TheAlgorithms/Python/pull/15384) · [`flash_sort` raised `IndexError` on repeated values](https://github.com/TheAlgorithms/Python/pull/15380) |
@@ -19,23 +21,23 @@ started with reproducing a bug or fuzzing the code to find one.
 
 **Security tooling, under review**
 
-- [github/codeql#22630](https://github.com/github/codeql/pull/22630) —
-  the `actions/unpinned-tag` query trusted floating tags like `@v4` on
+- [github/codeql#22630](https://github.com/github/codeql/pull/22630) — I fixed
+  the `actions/unpinned-tag` query trusting floating tags like `@v4` on
   "immutable" Actions. Only full versions and SHAs are immutable, so the query
   now flags the rest. Fixes [#22414](https://github.com/github/codeql/issues/22414).
-- [google/oss-fuzz#16170](https://github.com/google/oss-fuzz/pull/16170) —
-  CIFuzz wrote SARIF from whatever the last fuzz target returned, so in batch
-  mode a crash found by any earlier target failed the job but reached code
+- [google/oss-fuzz#16170](https://github.com/google/oss-fuzz/pull/16170) — I
+  found CIFuzz writing SARIF from whatever the last fuzz target returned, so in
+  batch mode a crash found by any earlier target failed the job but reached code
   scanning as an empty report.
 
 **Bug reports that pinned down a root cause**
 
 - [gradio-app/gradio#13781](https://github.com/gradio-app/gradio/issues/13781) —
-  traced missing type stubs to a packaging path where the `.pyi` files are only
-  generated as a side effect of importing the package, so a clean build ships
-  `py.typed` with no stubs behind it
+  I traced missing type stubs to a packaging path where the `.pyi` files are
+  only generated as a side effect of importing the package, so a clean build
+  ships `py.typed` with no stubs behind it
 - [microsoft/playwright#42402](https://github.com/microsoft/playwright/issues/42402) —
-  reproduced a libuv teardown crash on Windows and narrowed it to the update
+  I reproduced a libuv teardown crash on Windows and narrowed it to the update
   check's `fetch()` call
 
 ### llm-shield
@@ -43,14 +45,14 @@ started with reproducing a bug or fuzzing the code to find one.
 [![tests](https://github.com/Darkslayer3324j/llm-Sheild/actions/workflows/tests.yml/badge.svg)](https://github.com/Darkslayer3324j/llm-Sheild/actions/workflows/tests.yml)
 [![License: Apache 2.0](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](https://github.com/Darkslayer3324j/llm-Sheild/blob/main/LICENSE)
 
-A local, zero-trust LLM proxy. Point an OpenAI SDK, LangChain, or any HTTP
+I built a local, zero-trust LLM proxy. Point an OpenAI SDK, LangChain, or any HTTP
 client at `localhost:8000/v1` instead of the provider, and every request gets
 PII-scrubbed, cost-tracked, rate-limited and cached — streaming included —
 whether it's headed to OpenAI, Anthropic, Gemini or a local Ollama model.
 
 Python · FastAPI · SQLite · Docker
 
-The interesting part is the sanitizer: reversible placeholders, Luhn-validated
+The part I care most about is the sanitizer: reversible placeholders, Luhn-validated
 card detection, and structurally-validated SSNs, so it redacts without
 mangling order numbers. Nothing leaves the machine except the sanitized
 request.
@@ -75,3 +77,5 @@ usage accounting.
 ---
 
 <sub>Reach me at nafayhassan3324j@gmail.com</sub>
+
+<sub>Assisted with Claude.</sub>
