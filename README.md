@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0b1120,50:1e3a8a,100:0ea5e9&height=190&section=header&text=Nafay%20Hassan%20Rizvi&fontSize=44&fontColor=ffffff&fontAlignY=36&desc=Security%20%C2%B7%20Backend%20%C2%B7%20Finding%20bugs%20other%20people%20ship&descSize=16&descAlignY=57" alt="Syed Muhammad Nafay Hassan Rizvi" />
+<img src="./assets/banner.svg" alt="Nafay Hassan Rizvi — Security, Backend, I find the bugs other people ship" width="100%" />
 
 <a href="mailto:nafayhassan3324j@gmail.com"><img src="https://img.shields.io/badge/Email-nafayhassan3324j@gmail.com-0ea5e9?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" /></a>
 <a href="https://github.com/Darkslayer3324j"><img src="https://img.shields.io/badge/GitHub-Darkslayer3324j-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" /></a>
@@ -131,8 +131,10 @@ sanitized request.**
 
 <div align="center">
 
-<img src="https://github-readme-stats.vercel.app/api?username=Darkslayer3324j&show_icons=true&hide=stars&hide_border=true&theme=tokyonight&count_private=true&custom_title=My%20GitHub%20activity" alt="GitHub stats" height="165" />
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Darkslayer3324j&layout=compact&hide_border=true&theme=tokyonight&langs_count=6" alt="Top languages" height="165" />
+<img src="https://img.shields.io/badge/merged%20upstream-12%20PRs-0ea5e9?style=for-the-badge&labelColor=0b1120" alt="12 PRs merged" />
+<img src="https://img.shields.io/badge/projects%20fixed-5-1e3a8a?style=for-the-badge&labelColor=0b1120" alt="5 projects" />
+<img src="https://img.shields.io/badge/combined%20stars-311k%2B-1e3a8a?style=for-the-badge&labelColor=0b1120" alt="311k combined stars" />
+<img src="https://img.shields.io/badge/security%20tooling-CodeQL%20%C2%B7%20OSS--Fuzz-22c55e?style=for-the-badge&labelColor=0b1120" alt="CodeQL and OSS-Fuzz" />
 
 <br/><br/>
 
