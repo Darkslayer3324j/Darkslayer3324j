@@ -6,24 +6,27 @@ believing a value from the browser.
 
 ### Open source
 
-**9 pull requests merged** into projects other people maintain. Each one started
-with reproducing a bug or fuzzing the code to find one.
+**12 pull requests merged** into projects other people maintain. Each one
+started with reproducing a bug or fuzzing the code to find one.
 
 | Project | Merged fix |
 |---|---|
-| [TheAlgorithms/Python](https://github.com/TheAlgorithms/Python) | [`tree_sort` silently dropped duplicate values](https://github.com/TheAlgorithms/Python/pull/15381) · [`stalin_sort` raised `IndexError` on an empty list](https://github.com/TheAlgorithms/Python/pull/15382) · [`exponential_search` recursed forever below the first element](https://github.com/TheAlgorithms/Python/pull/15384) |
+| [microsoft/DevSkim](https://github.com/microsoft/DevSkim) | [A rule regex backtracked catastrophically](https://github.com/microsoft/DevSkim/pull/789) — DS440011 took 51 s on a 200 KB line. Rewrote it with a bounded quantifier and added a timing test. |
+| [TheAlgorithms/Python](https://github.com/TheAlgorithms/Python) | [`tree_sort` dropped duplicate values](https://github.com/TheAlgorithms/Python/pull/15381) · [`stalin_sort` raised `IndexError` on an empty list](https://github.com/TheAlgorithms/Python/pull/15382) · [`exponential_search` recursed forever below the first element](https://github.com/TheAlgorithms/Python/pull/15384) · [`flash_sort` raised `IndexError` on repeated values](https://github.com/TheAlgorithms/Python/pull/15380) |
+| [faif/python-patterns](https://github.com/faif/python-patterns) | [`flyweight_with_metaclass` shared one instance across different arguments](https://github.com/faif/python-patterns/pull/495) |
 | [vadimdemedes/ink](https://github.com/vadimdemedes/ink) | [PTY tests spawned the wrong Node executable](https://github.com/vadimdemedes/ink/pull/1010) |
 | [mampfes/hacs_waste_collection_schedule](https://github.com/mampfes/hacs_waste_collection_schedule) | Broken scrapers repaired after providers changed their sites: [Sjöbo](https://github.com/mampfes/hacs_waste_collection_schedule/pull/7468) · [Lindau](https://github.com/mampfes/hacs_waste_collection_schedule/pull/7469) · [RESO](https://github.com/mampfes/hacs_waste_collection_schedule/pull/7470) · [CIDIU](https://github.com/mampfes/hacs_waste_collection_schedule/pull/7471) · [Borlänge](https://github.com/mampfes/hacs_waste_collection_schedule/pull/7248) |
 
 **Security tooling, under review**
 
-- [microsoft/DevSkim#789](https://github.com/microsoft/DevSkim/pull/789) —
-  a rule regex (DS440011) backtracked catastrophically: a 200 KB line took 51 s
-  to scan. Rewrote it with a bounded quantifier and added a timing test.
 - [github/codeql#22630](https://github.com/github/codeql/pull/22630) —
   the `actions/unpinned-tag` query trusted floating tags like `@v4` on
   "immutable" Actions. Only full versions and SHAs are immutable, so the query
   now flags the rest. Fixes [#22414](https://github.com/github/codeql/issues/22414).
+- [google/oss-fuzz#16170](https://github.com/google/oss-fuzz/pull/16170) —
+  CIFuzz wrote SARIF from whatever the last fuzz target returned, so in batch
+  mode a crash found by any earlier target failed the job but reached code
+  scanning as an empty report.
 
 **Bug reports that pinned down a root cause**
 
