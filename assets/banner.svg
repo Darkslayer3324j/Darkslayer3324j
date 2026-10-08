@@ -15,10 +15,10 @@
 
     <g font-size="14" fill="#cbd5e1">
       <rect x="64" y="166" width="184" height="34" rx="6" fill="#0f172a" stroke="#334155"/>
-      <text x="156" y="188" text-anchor="middle">12 pull requests merged</text>
+      <text x="156" y="188" text-anchor="middle">13 pull requests merged</text>
 
       <rect x="262" y="166" width="216" height="34" rx="6" fill="#0f172a" stroke="#334155"/>
-      <text x="370" y="188" text-anchor="middle">311k&#43; stars on those projects</text>
+      <text x="370" y="188" text-anchor="middle">352k&#43; stars on those projects</text>
 
       <rect x="492" y="166" width="232" height="34" rx="6" fill="#0f172a" stroke="#334155"/>
       <text x="608" y="188" text-anchor="middle">In review at GitHub &#183; Google</text>

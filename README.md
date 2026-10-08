@@ -8,8 +8,8 @@
 
 <br/><br/>
 
-<img src="https://img.shields.io/badge/12-pull%20requests%20merged-1e3a8a?style=flat-square&labelColor=0b1120" alt="12 merged" />
-<img src="https://img.shields.io/badge/311k%2B-stars%20on%20the%20projects%20I%20fixed-1e3a8a?style=flat-square&labelColor=0b1120" alt="311k stars" />
+<img src="https://img.shields.io/badge/13-pull%20requests%20merged-1e3a8a?style=flat-square&labelColor=0b1120" alt="13 merged" />
+<img src="https://img.shields.io/badge/352k%2B-stars%20on%20the%20projects%20I%20fixed-1e3a8a?style=flat-square&labelColor=0b1120" alt="352k stars" />
 <img src="https://img.shields.io/badge/in%20review-GitHub%20%C2%B7%20Google-1e3a8a?style=flat-square&labelColor=0b1120" alt="In review at GitHub and Google" />
 
 </div>
@@ -31,13 +31,14 @@ people depend on.
 
 ## What I've shipped upstream
 
-**12 pull requests merged** into projects with **311,000+ combined stars**. Each
+**13 pull requests merged** into projects with **352,000+ combined stars**. Each
 one addresses a behavioural bug and includes regression coverage.
 
 | Project | ⭐ | What I fixed |
 |---|---:|---|
 | [**TheAlgorithms/Python**](https://github.com/TheAlgorithms/Python) | 224k | Four sorting and search bugs: [`tree_sort` dropped duplicates](https://github.com/TheAlgorithms/Python/pull/15381) · [`stalin_sort` crashed on empty input](https://github.com/TheAlgorithms/Python/pull/15382) · [`exponential_search` recursed forever](https://github.com/TheAlgorithms/Python/pull/15384) · [`flash_sort` crashed on repeats](https://github.com/TheAlgorithms/Python/pull/15380) |
 | [**faif/python-patterns**](https://github.com/faif/python-patterns) | 43k | [The flyweight metaclass shared one instance across different arguments](https://github.com/faif/python-patterns/pull/495) |
+| [**ManimCommunity/manim**](https://github.com/ManimCommunity/manim) | 41k | [Rendering a scene with sound to webm crashed](https://github.com/ManimCommunity/manim/pull/5025) wherever PyAV ships without the `libvorbis` encoder — including the Windows wheel. Added a fallback to `libopus`. |
 | [**vadimdemedes/ink**](https://github.com/vadimdemedes/ink) | 39k | [PTY tests spawned the wrong Node executable](https://github.com/vadimdemedes/ink/pull/1010) |
 | [**mampfes/hacs_waste_collection_schedule**](https://github.com/mampfes/hacs_waste_collection_schedule) | 2.2k | Five scrapers repaired after providers changed their sites: [Sjöbo](https://github.com/mampfes/hacs_waste_collection_schedule/pull/7468) · [Lindau](https://github.com/mampfes/hacs_waste_collection_schedule/pull/7469) · [RESO](https://github.com/mampfes/hacs_waste_collection_schedule/pull/7470) · [CIDIU](https://github.com/mampfes/hacs_waste_collection_schedule/pull/7471) · [Borlänge](https://github.com/mampfes/hacs_waste_collection_schedule/pull/7248) |
 | [**microsoft/DevSkim**](https://github.com/microsoft/DevSkim) | 1k | [A security rule backtracked catastrophically](https://github.com/microsoft/DevSkim/pull/789) — one 200 KB line took **51 seconds** to scan. I rewrote the regex with a bounded quantifier and added a timing test. |
@@ -79,7 +80,7 @@ CI never runs: a
 [TypeScript path-separator bug](https://github.com/styled-components/styled-components/pull/5820)
 in styled-components, a
 [missing audio codec](https://github.com/ManimCommunity/manim/pull/5025) in
-Manim, a
+Manim (merged), a
 [libuv teardown crash](https://github.com/microsoft/playwright/issues/42402) in
 Playwright, and a
 [packaging path that ships `py.typed` with no stubs](https://github.com/gradio-app/gradio/issues/13781)
@@ -130,9 +131,9 @@ sanitized request.**
 
 <div align="center">
 
-<img src="https://img.shields.io/badge/merged%20upstream-12%20PRs-0ea5e9?style=for-the-badge&labelColor=0b1120" alt="12 PRs merged" />
-<img src="https://img.shields.io/badge/projects%20fixed-5-1e3a8a?style=for-the-badge&labelColor=0b1120" alt="5 projects" />
-<img src="https://img.shields.io/badge/combined%20stars-311k%2B-1e3a8a?style=for-the-badge&labelColor=0b1120" alt="311k combined stars" />
+<img src="https://img.shields.io/badge/merged%20upstream-13%20PRs-0ea5e9?style=for-the-badge&labelColor=0b1120" alt="13 PRs merged" />
+<img src="https://img.shields.io/badge/projects%20fixed-6-1e3a8a?style=for-the-badge&labelColor=0b1120" alt="6 projects" />
+<img src="https://img.shields.io/badge/combined%20stars-352k%2B-1e3a8a?style=for-the-badge&labelColor=0b1120" alt="352k combined stars" />
 <img src="https://img.shields.io/badge/security%20tooling-CodeQL%20%C2%B7%20OSS--Fuzz-22c55e?style=for-the-badge&labelColor=0b1120" alt="CodeQL and OSS-Fuzz" />
 
 <br/><br/>
