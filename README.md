@@ -8,8 +8,8 @@
 
 <br/><br/>
 
-<img src="https://img.shields.io/badge/13-pull%20requests%20merged-1e3a8a?style=flat-square&labelColor=0b1120" alt="13 merged" />
-<img src="https://img.shields.io/badge/352k%2B-stars%20on%20the%20projects%20I%20fixed-1e3a8a?style=flat-square&labelColor=0b1120" alt="352k stars" />
+<img src="https://img.shields.io/badge/14-pull%20requests%20merged-1e3a8a?style=flat-square&labelColor=0b1120" alt="14 merged" />
+<img src="https://img.shields.io/badge/395k%2B-stars%20on%20the%20projects%20I%20fixed-1e3a8a?style=flat-square&labelColor=0b1120" alt="395k stars" />
 <img src="https://img.shields.io/badge/in%20review-GitHub%20%C2%B7%20Google-1e3a8a?style=flat-square&labelColor=0b1120" alt="In review at GitHub and Google" />
 
 </div>
@@ -31,19 +31,20 @@ people depend on.
 
 ## What I've shipped upstream
 
-**13 pull requests merged** into projects with **352,000+ combined stars**. Each
+**14 pull requests merged** into projects with **395,000+ combined stars**. Each
 one addresses a behavioural bug and includes regression coverage.
 
 | Project | ⭐ | What I fixed |
 |---|---:|---|
-| [**TheAlgorithms/Python**](https://github.com/TheAlgorithms/Python) | 224k | Four sorting and search bugs: [`tree_sort` dropped duplicates](https://github.com/TheAlgorithms/Python/pull/15381) · [`stalin_sort` crashed on empty input](https://github.com/TheAlgorithms/Python/pull/15382) · [`exponential_search` recursed forever](https://github.com/TheAlgorithms/Python/pull/15384) · [`flash_sort` crashed on repeats](https://github.com/TheAlgorithms/Python/pull/15380) |
+| [**TheAlgorithms/Python**](https://github.com/TheAlgorithms/Python) | 225k | Four sorting and search bugs: [`tree_sort` dropped duplicates](https://github.com/TheAlgorithms/Python/pull/15381) · [`stalin_sort` crashed on empty input](https://github.com/TheAlgorithms/Python/pull/15382) · [`exponential_search` recursed forever](https://github.com/TheAlgorithms/Python/pull/15384) · [`flash_sort` crashed on repeats](https://github.com/TheAlgorithms/Python/pull/15380) |
 | [**faif/python-patterns**](https://github.com/faif/python-patterns) | 43k | [The flyweight metaclass shared one instance across different arguments](https://github.com/faif/python-patterns/pull/495) |
-| [**ManimCommunity/manim**](https://github.com/ManimCommunity/manim) | 41k | [Rendering a scene with sound to webm crashed](https://github.com/ManimCommunity/manim/pull/5025) wherever PyAV ships without the `libvorbis` encoder — including the Windows wheel. Added a fallback to `libopus`. |
-| [**vadimdemedes/ink**](https://github.com/vadimdemedes/ink) | 39k | [PTY tests spawned the wrong Node executable](https://github.com/vadimdemedes/ink/pull/1010) |
-| [**mampfes/hacs_waste_collection_schedule**](https://github.com/mampfes/hacs_waste_collection_schedule) | 2.2k | Five scrapers repaired after providers changed their sites: [Sjöbo](https://github.com/mampfes/hacs_waste_collection_schedule/pull/7468) · [Lindau](https://github.com/mampfes/hacs_waste_collection_schedule/pull/7469) · [RESO](https://github.com/mampfes/hacs_waste_collection_schedule/pull/7470) · [CIDIU](https://github.com/mampfes/hacs_waste_collection_schedule/pull/7471) · [Borlänge](https://github.com/mampfes/hacs_waste_collection_schedule/pull/7248) |
+| [**ManimCommunity/manim**](https://github.com/ManimCommunity/manim) | 42k | [Rendering a scene with sound to webm crashed](https://github.com/ManimCommunity/manim/pull/5025) wherever PyAV ships without the `libvorbis` encoder — including the Windows wheel. Added a fallback to `libopus`. |
+| [**styled-components/styled-components**](https://github.com/styled-components/styled-components) | 41k | [A TypeScript language-service test failed on every Windows machine](https://github.com/styled-components/styled-components/pull/5820) — the probe path was built with backslashes, and TypeScript hands the host forward slashes on every platform. |
+| [**vadimdemedes/ink**](https://github.com/vadimdemedes/ink) | 40k | [PTY tests spawned the wrong Node executable](https://github.com/vadimdemedes/ink/pull/1010) |
+| [**mampfes/hacs_waste_collection_schedule**](https://github.com/mampfes/hacs_waste_collection_schedule) | 2.3k | Five scrapers repaired after providers changed their sites: [Sjöbo](https://github.com/mampfes/hacs_waste_collection_schedule/pull/7468) · [Lindau](https://github.com/mampfes/hacs_waste_collection_schedule/pull/7469) · [RESO](https://github.com/mampfes/hacs_waste_collection_schedule/pull/7470) · [CIDIU](https://github.com/mampfes/hacs_waste_collection_schedule/pull/7471) · [Borlänge](https://github.com/mampfes/hacs_waste_collection_schedule/pull/7248) |
 | [**microsoft/DevSkim**](https://github.com/microsoft/DevSkim) | 1k | [A security rule backtracked catastrophically](https://github.com/microsoft/DevSkim/pull/789) — one 200 KB line took **51 seconds** to scan. I rewrote the regex with a bounded quantifier and added a timing test. |
 
-### In review at GitHub and Google
+### In review
 
 <img src="https://img.shields.io/badge/github%2Fcodeql-%2322630-181717?style=flat-square&logo=github&logoColor=white" alt="codeql PR" />
 
@@ -60,6 +61,21 @@ returned. In batch mode a crash found by any earlier target failed the build but
 reached GitHub code scanning as an empty report — a silently missed finding.
 [#16170](https://github.com/google/oss-fuzz/pull/16170).
 
+<img src="https://img.shields.io/badge/jellyfin%2Fjellyfin-%2318420-00A4DC?style=flat-square&logo=jellyfin&logoColor=white" alt="jellyfin PR" /> <sub>C# · 59k ⭐</sub>
+
+I found an episode-name regex that never finishes on file names carrying several
+bracketed tags, which stalls the library scan they are part of: 53 characters
+took **29 seconds**, and the cost tripled with every two tags. I tried four
+rewrites and kept the only one that matched the original on 300,000 random names.
+[#18420](https://github.com/jellyfin/jellyfin/pull/18420).
+
+<img src="https://img.shields.io/badge/mihonapp%2Fmihon-%234107-2E3943?style=flat-square&logo=android&logoColor=white" alt="mihon PR" /> <sub>Kotlin · 25k ⭐</sub>
+
+I found a crash that stopped a manga from refreshing when a chapter name held a
+`#`: names were grouped by masking their numbers with that same character, so a
+group was indexed past the end of its shortest member.
+[#4107](https://github.com/mihonapp/mihon/pull/4107).
+
 ---
 
 ## How I find them
@@ -73,14 +89,18 @@ a linked-list corruption in
 (196k ⭐).
 
 **Measuring, not guessing** — for the DevSkim ReDoS I timed the real .NET engine
-rather than trusting a Python regex model that over-reported it.
+rather than trusting a Python regex model that over-reported it. The same habit
+found [marked](https://github.com/markedjs/marked/issues/4099) (37k ⭐) taking 16
+seconds on 12 KB of unmatched emphasis markers; I reported it with the numbers,
+and the fix shipped in
+[v18.1.3](https://github.com/markedjs/marked/releases/tag/v18.1.3).
 
 **Cross-platform reproduction** — I work on Windows, so I catch what Linux-only
 CI never runs: a
 [TypeScript path-separator bug](https://github.com/styled-components/styled-components/pull/5820)
-in styled-components, a
+in styled-components and a
 [missing audio codec](https://github.com/ManimCommunity/manim/pull/5025) in
-Manim (merged), a
+Manim, both merged, a
 [libuv teardown crash](https://github.com/microsoft/playwright/issues/42402) in
 Playwright, and a
 [packaging path that ships `py.typed` with no stubs](https://github.com/gradio-app/gradio/issues/13781)
@@ -115,6 +135,8 @@ sanitized request.**
 ![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)
 ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![C#](https://img.shields.io/badge/C%23-512BD4?style=for-the-badge&logo=dotnet&logoColor=white)
+![Kotlin](https://img.shields.io/badge/Kotlin-7F52FF?style=for-the-badge&logo=kotlin&logoColor=white)
 ![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
 ![Express](https://img.shields.io/badge/Express-000000?style=for-the-badge&logo=express&logoColor=white)
 
@@ -131,9 +153,9 @@ sanitized request.**
 
 <div align="center">
 
-<img src="https://img.shields.io/badge/merged%20upstream-13%20PRs-0ea5e9?style=for-the-badge&labelColor=0b1120" alt="13 PRs merged" />
-<img src="https://img.shields.io/badge/projects%20fixed-6-1e3a8a?style=for-the-badge&labelColor=0b1120" alt="6 projects" />
-<img src="https://img.shields.io/badge/combined%20stars-352k%2B-1e3a8a?style=for-the-badge&labelColor=0b1120" alt="352k combined stars" />
+<img src="https://img.shields.io/badge/merged%20upstream-14%20PRs-0ea5e9?style=for-the-badge&labelColor=0b1120" alt="14 PRs merged" />
+<img src="https://img.shields.io/badge/projects%20fixed-7-1e3a8a?style=for-the-badge&labelColor=0b1120" alt="7 projects" />
+<img src="https://img.shields.io/badge/combined%20stars-395k%2B-1e3a8a?style=for-the-badge&labelColor=0b1120" alt="395k combined stars" />
 <img src="https://img.shields.io/badge/security%20tooling-CodeQL%20%C2%B7%20OSS--Fuzz-22c55e?style=for-the-badge&labelColor=0b1120" alt="CodeQL and OSS-Fuzz" />
 
 <br/><br/>
