@@ -110,6 +110,39 @@ in Gradio.
 
 ## Projects
 
+### [AEGIS](https://github.com/Darkslayer3324j/aegis)
+
+<sub>Python · research prototype</sub>
+
+> A quiet feed is not the same as a quiet world.
+
+I built a probabilistic conflict forecaster around one problem most forecasting
+systems ignore: event data arrives late and gets revised, so a month that looks
+quiet may only look quiet because the reports haven't come in yet. AEGIS
+estimates how complete the recent record probably is, forecasts with that in
+mind, and can answer `ABSTAIN` instead of producing a number it can't stand
+behind.
+
+It keeps every data release as an immutable, hashed vintage and backtests each
+forecast only against what existed at the time. It ships a terminal interface
+and a 3D globe down to 1,367 provinces. The interface always shows the simple
+baseline's score next to its own — and I publish that the baseline still wins on
+one of the two metrics, because a forecaster that hides its misses isn't one.
+
+### [Precise-Edit](https://github.com/Darkslayer3324j/Precise-Edit)
+
+<sub>TypeScript · in development</sub>
+
+I'm building an SDK for scope-aware video editing: click an object and edit only
+that object. Move, resize, recolour or remove it in the browser, and what was
+behind it is rebuilt from other frames. Selections are tracked through the clip,
+and frames where the tracker loses the object are flagged instead of silently
+edited.
+
+The guarantee I care about is tested rather than promised: pixels outside the
+selection stay byte-identical, even when an AI model produced the edit. The
+README lists what doesn't work yet as plainly as what does.
+
 ### llm-shield
 
 [![tests](https://github.com/Darkslayer3324j/llm-Sheild/actions/workflows/tests.yml/badge.svg)](https://github.com/Darkslayer3324j/llm-Sheild/actions/workflows/tests.yml)
